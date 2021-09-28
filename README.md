@@ -6,7 +6,7 @@
 
 ## Integrantes
 
-- Bruno Felipe De Melo Souza (35 8814-5902)
+- Bruno Felipe De Melo Souza (35 98814-5902)
 - Gabriel Augusto Piedade Inácio (11 964908005)
 - Luiz Henrique Pires Colombo (35 9999-94561)
 
