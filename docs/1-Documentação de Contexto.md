@@ -22,5 +22,3 @@ Primeiramente,  como o nosso tema é a organização de finanças a primeira coi
 
 Nosso objetivo é facilitar o uso de interfaces de controle de finanças para aquelas pessoas que nao possuem prévio conhecimento. 
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
-
