@@ -21,4 +21,4 @@ Primeiramente,  como o nosso tema é a organização de finanças a primeira coi
 ## Público-Alvo
 
 Nosso objetivo é facilitar o uso de interfaces de controle de finanças para aquelas pessoas que nao possuem prévio conhecimento. 
-
+Mapa de Stakeholders na pasta imagens.
