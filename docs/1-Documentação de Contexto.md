@@ -1,24 +1,21 @@
 # Introdução
 
-Nossa aplicação tem como objetivo facilitar a visualização de dados por parte da empresa, com isso ajudando na organização de tais. Utilizaremos o framework Anvil, a  biblioteca Pandas, juntamente com a linguegem de progamação Python. 
+Nossa aplicação tem como objetivo facilitar a visualização e manipulação de dados por parte da empresa e suas pesquisas, com isso facilitando sua organização e compreensão. Utilizaremos o framework Django, a  biblioteca Pandas, juntamente com a linguagem de progamação Python. 
 
 ## Problema
 
-O Problema que nossa aplicação irá resolver é a desorganização dos dados dentro de uma empresa. Nossa aplicação será desenvolvida para empresas que necessitam organizar dados coletados publicamente; usaremos a biblioteca Panda com python.
+O Problema que nossa aplicação visará resolver é a desordem na hora de manipular e organizar dados de tabelas de pesquisas. Nossa aplicação será desenvolvida para empresas que necessitam de organizar dados coletados publicamente através de pesquisas de censo.
 
-## Objetivos
+## Objetivo:
 
-O principal objetivo da nossa aplicação é facilitar a visualização dos dados feitos pela empresa.
-
-1. Facilitar a visualização de pontos especificos dos dados coletados.
-2. Nosso objetivo é criar uma aplicacão que facilite a organização dos dados que nos foram fornecidos.
+1. O principal objetivo da nossa aplicação é facilitar a visualização e manipulação dos dados obtidos pela empresa.
+2. Criar uma aplicação que facilite a organização dos dados que nos foram fornecidos.
  
 ## Justificativa
 
-Primeiramente,  como o nosso tema é a organização de dados a primeira coisa que pensamos foi utilizar pyhton e excel, entretanto acreditamos que não seria muito usual para pessoas leigas. Com isso, optamos por utilizar uma interface, no caso web, para facilitar a utilização, dessa forma escolhemos utilizar o Framework Anvil junto da biblioteca Panda da linguagem python, visto que no quesito comparação de dados são uma ótima opção, com o modelo Model-View-Template.  
+Primeiramente, o tema escolhido foi de organização de dados de planilhas disponibilizadas por empresas que realizam tais pesquisas. Para o desenvolvimento do projeto, optamos por utilizar a linguagem Python como base, juntamente com a biblioteca Pandas, que serve para a manipulação de planilhas, a biblioteca matplot e seaborn para a plotagem de gráficos e o framework Django para integrar com a linguagem Python.   
 
 
 ## Público-Alvo
 
-Nosso objetivo é facilitar o uso de interfaces de controle de dados, organizando e filtrando o máximo possível para auxiliar e facilitar na observação e analise do mesmo. 
-Mapa de Stakeholders na pasta imagens.
+Nosso objetivo é facilitar o uso de interfaces de controle e manipulação de dados, organizando e filtrando o máximo possível para auxiliar na observação e análise dos mesmos.
