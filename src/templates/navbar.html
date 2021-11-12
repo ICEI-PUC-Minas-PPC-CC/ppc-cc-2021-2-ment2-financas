@@ -1,0 +1,15 @@
+{% load static %}
+{% url 'spreadsheets:home' as path_to_home %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href=""><img src="{% static 'logo.png' %}" class="logo-sm"></a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == path_to_home %}active{% endif %}" href="{{path_to_home}}">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
