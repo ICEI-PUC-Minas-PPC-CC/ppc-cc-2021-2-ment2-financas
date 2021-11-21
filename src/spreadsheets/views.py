@@ -66,7 +66,7 @@ def file_upload_view(request):
         except:
             print('ERRO!!!!')
     return False
-    
+
 
 def column_names():
     reader =  file_upload_view()
