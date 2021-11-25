@@ -4,7 +4,8 @@ import pandas as pd
 from django.views.generic import TemplateView
 from django.http import HttpResponse
 from .models import Spreadsheet
-from .forms  import Search
+from .forms  import Search, column_names
+import json
 
 # Create your views here.
 def home_view(request):
@@ -20,6 +21,7 @@ def file_upload_view(request):
     print("foi enviado")
     
     if request.method == 'POST':
+       
         try:
             xsl_file = request.FILES.get('file')
             obj = Spreadsheet.objects.create(file_name=xsl_file, xsl_file= xsl_file)
@@ -31,12 +33,14 @@ def file_upload_view(request):
             readerhtml = reader.to_html
             print("Planilha!!!!!!")
             print("______________________________________")
-            print(readerhtml)
-
+            #print(readerhtml)
+            """
             print("COLUNAS!!!!!!")
             print("______________________________________")
             column_names = list(reader.columns)
             print(column_names)
+            """
+            """
             print("Retirando um coluna!!!!!!")
             print("______________________________________")
             newreader = reader.drop('Hora de início', axis=1)
@@ -60,14 +64,14 @@ def file_upload_view(request):
             print(qtde_categoria)
 
             qtde_categoria_perc = newreader['SEXO'].value_counts(normalize=True)
-            print(qtde_categoria_perc)
+            print(qtde_categoria_perc)"""
         
-            return HttpResponse(readerhtml)
+            return HttpResponse(readerhtml) 
         except:
             print('ERRO!!!!')
     return False
 
-
+"""
 def column_names():
     reader =  file_upload_view()
     columns = list(reader.columns)
@@ -76,3 +80,21 @@ def column_names():
     print(columns)
     return columns
 
+"""
+def getColumnNames(request):
+    print("ENTROU NA FUNC")
+    try:
+        if request.method == "POST":
+            reader =  file_upload_view()
+            column_names = list(reader.columns)
+            print("COLUNAS!!!!!!")
+            print("__________________________________")
+            print(column_names)
+            algo = json.dumps(column_names)
+            return HttpResponse(algo)
+
+        else:
+            return HttpResponse("vish deu ruim")
+    except:
+        print("erro except")
+        return HttpResponse("erro except return ")

@@ -1,6 +1,4 @@
 from django import forms
-from .views import file_upload_view
-
 
 #colunas criados para exemplo
 colunmchoices = (
@@ -11,12 +9,17 @@ colunmchoices = (
 )
 
 def column_names():
+    from .views import file_upload_view  #<-------------
     reader =  file_upload_view()
     columns = list(reader.columns)
     print("COLUNAS!!!!!!")
+    print("TIPOOOOO!!!!!!")
+    print("______________________________________")
+    print(type(reader))
     print("__________________________________")
     print(columns)
     return columns
+        
 #escolhas = column_names()
 
 graphicchoices = (
@@ -26,6 +29,7 @@ graphicchoices = (
 )
 
 class Search(forms.Form):
-    colunas = forms.ChoiceField(choices =  colunmchoices)
+    #escolhas = column_names()
+    colunasX = forms.ChoiceField(choices =  colunmchoices)
+    colunasY = forms.ChoiceField(choices =  colunmchoices)
     graficos = forms.ChoiceField(choices = graphicchoices)
-    

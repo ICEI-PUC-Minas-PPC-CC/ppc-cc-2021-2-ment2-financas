@@ -25,6 +25,8 @@ home
         {{reader|safe}}
     {% endif %}
     <br>
+        <button type="submit" class="btn btn-info mt-2" formmethod="get" >Pegar Colunas</button>
+    <br>
     <form action ="" method="POST">
         {% csrf_token %}
         {{form|crispy}}
