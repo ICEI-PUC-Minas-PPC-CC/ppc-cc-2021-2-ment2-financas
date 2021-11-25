@@ -32,5 +32,11 @@ home
         {{form|crispy}}
         <button type="submit" class="btn btn-info mt-2">Salvar</button>
     </form>
+    <br>
+    {% if readerhtml %}
+        {{readerhtml|safe}}
+    {% else %}
+        <h3>SEM DADO</h3>
+    {% endif %}
 
 {% endblock content %}

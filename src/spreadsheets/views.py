@@ -4,14 +4,16 @@ import pandas as pd
 from django.views.generic import TemplateView
 from django.http import HttpResponse
 from .models import Spreadsheet
-from .forms  import Search, column_names
+from .forms  import Search
 import json
 
 # Create your views here.
 def home_view(request):
     form = Search(request.POST or None)
-
-    return render(request, 'spreadsheets/home.html', {'form': form})
+    context = {
+        'form': form,
+    }
+    return render(request, 'spreadsheets/home.html', context)
 
 
 class UploadTemplateView(TemplateView):
@@ -65,8 +67,11 @@ def file_upload_view(request):
 
             qtde_categoria_perc = newreader['SEXO'].value_counts(normalize=True)
             print(qtde_categoria_perc)"""
-        
-            return HttpResponse(readerhtml) 
+            context = {
+            'readerhtml' : readerhtml 
+            }
+            return render(request, 'spreadsheets/home.html', context)
+            #return HttpResponse(readerhtml) 
         except:
             print('ERRO!!!!')
     return False
@@ -79,6 +84,8 @@ def column_names():
     print("__________________________________")
     print(columns)
     return columns
+
+"""
 
 """
 def getColumnNames(request):
@@ -98,3 +105,5 @@ def getColumnNames(request):
     except:
         print("erro except")
         return HttpResponse("erro except return ")
+
+"""
