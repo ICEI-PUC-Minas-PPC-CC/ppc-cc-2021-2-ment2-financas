@@ -67,9 +67,12 @@ def file_upload_view(request):
 
             qtde_categoria_perc = newreader['SEXO'].value_counts(normalize=True)
             print(qtde_categoria_perc)"""
+            readerhtml = True
             context = {
-            'readerhtml' : readerhtml 
+            'readerhtml':readerhtml 
             }
+            print("CONTEX!!!!!!")
+            print(context)
             return render(request, 'spreadsheets/home.html', context)
             #return HttpResponse(readerhtml) 
         except:

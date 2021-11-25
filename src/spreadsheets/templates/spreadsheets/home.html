@@ -33,7 +33,8 @@ home
         <button type="submit" class="btn btn-info mt-2">Salvar</button>
     </form>
     <br>
-    {% if readerhtml %}
+    {% if  readerhtml %}
+        print("ROBERTO!!!")
         {{readerhtml|safe}}
     {% else %}
         <h3>SEM DADO</h3>
