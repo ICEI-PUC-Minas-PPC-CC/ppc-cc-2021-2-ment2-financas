@@ -7,19 +7,18 @@ colunmchoices = (
     ('#3', 'Faixa etária'),
     ('#4', 'Você tem filhos?'),
 )
-""""
+
 def column_names():
-    from .views import file_upload_view  #<-------------
-    reader =  file_upload_view()
-    columns = list(reader.columns)
+    #reader =  
+    #columns = list(reader.columns)
     print("COLUNAS!!!!!!")
     print("TIPOOOOO!!!!!!")
     print("______________________________________")
-    print(type(reader))
+    #print(type(reader))
     print("__________________________________")
-    print(columns)
-    return columns
-        """
+    #print(columns)
+    #return columns
+
 #escolhas = column_names()
 
 graphicchoices = (

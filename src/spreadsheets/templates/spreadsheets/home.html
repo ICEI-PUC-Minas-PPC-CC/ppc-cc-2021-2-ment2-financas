@@ -13,31 +13,16 @@ home
 {% block content %}
     <h5>Faça um upload de um arquivo .xsl</h5>
     <br>
-    <div id="alert-box"></div>
-    <form id="my-dropozne" class="dropzone dz">
+    <form action ="" method="POST" enctype = "multipart/form-data">
         {% csrf_token %}
         <div class="fallback">
-            <input name="file" type="file" multiple />
+            <input name="file" type="file" accept=".xls, .xlsx" multiple />
         </div>
-    </form>
-    <br>
-    {% if reader %}
-        {{reader|safe}}
-    {% endif %}
-    <br>
-        <button type="submit" class="btn btn-info mt-2" formmethod="get" >Pegar Colunas</button>
-    <br>
-    <form action ="" method="POST">
-        {% csrf_token %}
-        {{form|crispy}}
         <button type="submit" class="btn btn-info mt-2">Salvar</button>
     </form>
     <br>
-    {% if  readerhtml %}
-        print("ROBERTO!!!")
-        {{readerhtml|safe}}
-    {% else %}
-        <h3>SEM DADO</h3>
+    {% if  describe %}
+        {{describe|safe}}
     {% endif %}
 
-{% endblock content %}
+    {% endblock content %}
