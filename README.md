@@ -32,6 +32,24 @@
 <li><a href="docs/12-Referências.md"> Referências</a></li>
 </ol>
 
+# Como Usar 
+
+criar um ambiente virtual: 
+Linux: python -m venv venv
+source bin/activate
+Windows: 
+pip install virtualenv
+virtualenv venv
+venv/Scripts/Activate
+Clonando o repositório:
+git clone https://github.com/ICEI-PUC-Minas-PPC-CC/ppc-cc-2021-2-ment2-financas.git
+cd ppc-cc-2021-2-ment2-financas/src
+pip install -r requirements.txt
+pyhton manage.py runserver
+
+entrar no localhost:
+http://127.0.0.1.8000
+
 # Código
 
 <li><a href="src/"> Código Fonte</a></li>
